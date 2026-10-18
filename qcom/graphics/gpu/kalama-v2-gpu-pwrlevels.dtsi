@@ -142,13 +142,14 @@
 
 			qcom,sku-codes = <SKU_CODE(PCODE_UNKNOWN, FC_UNKNOWN)>;
 
+			/* Keep the thermal profile's 10-level map; alias the unsupported 720 MHz slot to 692 MHz. */
 			qcom,initial-pwrlevel = <9>;
 			qcom,initial-min-pwrlevel = <9>;
 
 			qcom,gpu-pwrlevel@0 {
 				reg = <0>;
-				qcom,gpu-freq = <720000000>;
-				qcom,level = <RPMH_REGULATOR_LEVEL_SVS>;
+				qcom,gpu-freq = <692000000>;
+				qcom,level = <RPMH_REGULATOR_LEVEL_LOW_SVS_P1>;
 
 				qcom,bus-freq = <9>;
 				qcom,bus-min = <9>;
